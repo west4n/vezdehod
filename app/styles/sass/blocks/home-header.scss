@@ -8,6 +8,9 @@ html {
 	height: 100%;
 	color: #fff;
 	padding-top: $size;
+	@include media-breakpoint-down(md) {
+		padding-top: $size-sm;
+	}
 	&__content {
 		height: 100%;
 	}
@@ -24,6 +27,9 @@ html {
 	background-color: $deep;
 	display: flex;
 	align-items: center;
+	@include media-breakpoint-down(md) {
+		height: $size-sm;
+	}
 	&__decoration {
 		flex: 1 0 0;
 		text-align: center;
@@ -90,6 +96,13 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include media-breakpoint-down(md) {
+			width: $size-sm;
+			height: $size-sm;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		flex: 1 0 0;
 	}
 }
 
@@ -98,6 +111,9 @@ html {
 	text-align: right;
 	position: relative;
 	height: $size;
+	@include media-breakpoint-down(md) {
+		height: $size-sm;
+	}
 }
 
 .menu-button {
@@ -111,6 +127,10 @@ html {
 	background-repeat: no-repeat;
 	background-position: center center;
 	transition: background-color 0.25s ease-out;
+	@include media-breakpoint-down(md) {
+		width: $size-sm;
+		height: $size-sm;
+	}
 	&:hover {
 		background-color: $accent;
 	}
@@ -130,6 +150,10 @@ html {
 	align-items: center;
 	justify-content: center;
 	z-index: 5;
+	@include media-breakpoint-down(md) {
+		width: $size-sm;
+		padding-top: $size-sm;
+	}
 	&__decoration {
 		flex: 1 0 0;
 		background-image: url(../images/dist/decoration.svg);
@@ -148,6 +172,10 @@ html {
 		background-size: 12px;
 		background-repeat: no-repeat;
 		background-position: center center;
+		@include media-breakpoint-down(md) {
+			width: $size-sm;
+			flex: 0 0 $size-sm;
+		}
 	}
 }
 
@@ -187,6 +215,9 @@ html {
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+	@include media-breakpoint-down(md) {
+		padding-left: $size-sm;
+	}
 }
 
 .slider-bottom {
@@ -198,6 +229,11 @@ html {
 	align-items: center;
 	z-index: 5;
 	width: calc(75% - #{$size});
+	@include media-breakpoint-down(md) {
+		left: $size-sm;
+		height: $size-sm;
+		width: 100%;
+	}
 }
 
 .slider-share {
@@ -214,6 +250,10 @@ html {
 		background-color: $dark;
 		border-right: 1px solid rgba($color: #fff, $alpha: $border-opacity);
 		margin-left: -0.5px;
+		@include media-breakpoint-down(md) {
+			width: $size-sm;
+			height: $size-sm;
+		}
 		&:last-child {
 			border: none;
 		}
@@ -262,6 +302,9 @@ html {
 	z-index: 3;
 	width: 100%;
 	height: calc(100% - #{$size});
+	@include media-breakpoint-down(md) {
+		height: calc(100% - #{$size-sm});
+	}
 }
 
 .slider-text__slide {
@@ -311,6 +354,7 @@ html {
 	justify-content: center;
 	align-items: center;
 	height: $size;
+	position: relative;
 	.swiper-pagination-bullet {
 		width: 6px;
 		height: 6px;
@@ -332,6 +376,9 @@ html {
 				left: -4px;
 			}
 		}
+	}
+	@include media-breakpoint-down(md) {
+		height: $size-sm;
 	}
 }
 

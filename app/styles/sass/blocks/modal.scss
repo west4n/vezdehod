@@ -1,0 +1,33 @@
+.modal {
+  z-index: 10000000;
+  position: absolute;
+  font-family: raleway-vh, sans-serif;
+}
+
+.modal__container {
+  background-color: lighten($color: $deep, $amount: 6);
+  box-shadow: 0 0 0 8px rgba($color: #fff, $alpha: .1);
+  border-radius: 0;
+}
+
+.modal__title {
+  color: #fff;
+  font-family: oswald-vh, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+
+.modal__header {
+  text-align: center;
+}
+
+.modal__close {
+  color: #fff;
+  opacity: 0.25;
+  transition: opacity .25s ease-in;
+  &:hover {
+    opacity: 1;
+  }
+}

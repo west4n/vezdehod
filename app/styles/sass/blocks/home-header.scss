@@ -43,6 +43,9 @@ html {
 			position: relative;
 			top: -5px;
 		}
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 	&__contacts {
 		text-transform: uppercase;
@@ -75,6 +78,13 @@ html {
 	}
 }
 
+@include media-breakpoint-down(md) {
+	.top-line__separator,
+	.top-line__address {
+		display: none;
+	}
+}
+
 .logo {
 	flex: 0 0 200px;
 	display: flex;
@@ -104,6 +114,11 @@ html {
 	@include media-breakpoint-down(md) {
 		flex: 1 0 0;
 	}
+	&__text {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
 }
 
 .menu-button-container {
@@ -113,6 +128,7 @@ html {
 	height: $size;
 	@include media-breakpoint-down(md) {
 		height: $size-sm;
+		flex: 1 0 0;
 	}
 }
 
@@ -160,9 +176,15 @@ html {
 		width: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 	&__social {
 		flex: 1 0 0;
+		@include media-breakpoint-down(md) {
+			margin-top: 40px;
+		}
 	}
 	&__share-icon {
 		background-color: $accent;
@@ -284,6 +306,9 @@ html {
 		background-color: rgba($color: #000000, $alpha: 0.45);
 		z-index: 2;
 	}
+	@include media-breakpoint-down(md) {
+		width: 100%;
+	}
 }
 
 .slider-img__slide {
@@ -316,6 +341,9 @@ html {
 .slider-text__content {
 	text-align: right;
 	padding-right: 22%;
+	@include media-breakpoint-down(md) {
+		padding-left: 20px;
+	}
 }
 
 .slider-text__heading {
@@ -330,6 +358,16 @@ html {
 		color: $accent;
 		white-space: nowrap;
 	}
+	@include media-breakpoint-down(lg) {
+		font-size: 50px;
+		max-width: 500px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 35px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 28px;
+	}
 }
 
 .slider-text__description {
@@ -341,6 +379,9 @@ html {
 	line-height: 170%;
 	margin-top: 15px;
 	margin-bottom: 20px;
+	@include media-breakpoint-down(sm) {
+		font-size: 12px;
+	}
 }
 
 .slider-text__button {
@@ -379,6 +420,7 @@ html {
 	}
 	@include media-breakpoint-down(md) {
 		height: $size-sm;
+		display: none;
 	}
 }
 
@@ -392,6 +434,9 @@ html {
 			background-color: $accent;
 			top: -1px;
 		}
+	}
+	@include media-breakpoint-down(md) {
+		display: none;
 	}
 }
 
@@ -429,6 +474,9 @@ html {
 	.swiper-button-next {
 		right: 0;
 	}
+	@include media-breakpoint-down(md) {
+		left: -20px;
+	}
 }
 
 .slider-gear {
@@ -442,6 +490,9 @@ html {
 	z-index: 2;
 	top: 50%;
 	right: calc(24% - 235px);
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
 }
 
 .slider-pagination-count {
@@ -460,6 +511,14 @@ html {
 		display: inline-block;
 		min-width: 42px;
 	}
+	@include media-breakpoint-down(lg) {
+		top: 0;
+		right: 0;
+		transform: scale(0.6);
+	}
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
 }
 
 .slider-pagination-current {
@@ -473,5 +532,10 @@ html {
 	&__dot {
 		color: $accent;
 		-webkit-text-stroke: transparent;
+	}
+	@include media-breakpoint-down(lg) {
+		font-size: 50px;
+		bottom: 0;
+		right: 20px;
 	}
 }
